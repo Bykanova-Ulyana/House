@@ -36,12 +36,17 @@ func purposeTranscript(pr int) string {
 // Функция для вывода информации о посуде
 
 func PrintCrockery(cr []Crockery) {
+	if cr == nil {
+		return
+	}
+	fmt.Print("\n\n -------ПОСУДА-------\n")
 	for _, crockery := range cr {
+
 		engraving := "без гравировки"
 		if crockery.Engraving {
 			engraving = "есть гравировка"
 		}
-		fmt.Printf("%s\nПредназначение: %s\n Материал: %s\nКоличество: %d\nНаличие гравировки: %d\nОбъём: %d", crockery.Type,
+		fmt.Printf("%s\n\tПредназначение: %s\n\tМатериал: %s\n\tКоличество: %d\n\tНаличие гравировки: %s\n\tОбъём: %d", crockery.Type,
 			crockery.Purpose, crockery.Material, crockery.Number, engraving, crockery.Capacity)
 	}
 

@@ -3,9 +3,13 @@ package furniture
 import "fmt"
 
 func PrintFurniture(furniture []Furniture) {
+	if furniture == nil {
+		return
+	}
+	fmt.Print("\n\n -------МЕБЕЛЬ-------\n")
 	for _, f := range furniture {
-		fmt.Println("\n\tТип мебели: ", f.Type, "\n\tцвет: ", f.Color, "\n\tматериал: ",
-			f.Material, "\n\tколичество: ", f.Number, "\n\tширина: ", f.Width, "\n\tвысота: ", f.Height)
+		fmt.Println("\n", f.Type, "\n\tцвет: ", f.Color, "\n\tматериал: ",
+			f.Material, "\n\tколичество: ", f.Number, "\n\tдлина: ", f.Length, "\n\tширина: ", f.Width, "\n\tвысота: ", f.Height)
 	}
 }
 

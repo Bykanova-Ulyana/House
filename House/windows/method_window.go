@@ -2,11 +2,6 @@ package windows
 
 import "fmt"
 
-func createWindow() Window {
-	window := Window{Number: 1, Length: 1.2, Width: 1, OpenWindow: false}
-	return window
-}
-
 func StatusOpenCloseWindow(w *Window, command bool) {
 	switch command {
 	case command == true || w.OpenWindow == true:
@@ -19,9 +14,14 @@ func StatusOpenCloseWindow(w *Window, command bool) {
 }
 
 func PrintWindow(w Window) {
+	fmt.Print("\n\n -------ОКНА-------\n")
+	if w.Number == 0 {
+		print("\n\tОкон нет!\n\n")
+		return
+	}
 	openClose := "открыто"
 	if w.OpenWindow {
 		openClose = "закрыто"
 	}
-	fmt.Printf("Длина окна %f, ширина окна %f, окно открыто %s \n", w.Length, w.Width, openClose)
+	fmt.Printf("\n\tДлина окна %f\n\tШирина окна %f\n\tОкно открыто %s \n", w.Length, w.Width, openClose)
 }

@@ -8,4 +8,4 @@ COPY ./ ./
 RUN go mod download
 RUN go build -o Home ./main.go
 
-CMD ["./home"]
+CMD ["./Home"]

@@ -1,12 +1,12 @@
 package rooms
 
 import (
-	"golang/home/House/appliances"
-	"golang/home/House/crockery"
-	"golang/home/House/family"
-	"golang/home/House/furniture"
-	"golang/home/House/plumbing"
-	"golang/home/House/windows"
+	"Home/House/appliances"
+	"Home/House/crockery"
+	"Home/House/family"
+	"Home/House/furniture"
+	"Home/House/plumbing"
+	"Home/House/windows"
 )
 
 type Room struct {

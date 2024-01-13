@@ -36,12 +36,16 @@ func GetInputForPets() Pets {
 // Функция для вывода информации о питомце
 
 func PrintPet(p []Pets) {
+	if p == nil {
+		return
+	}
+	fmt.Print("\n\n -------ЖИВОТНЫЕ-------\n")
 	for _, pet := range p {
 		sexAnimal := "мужской"
 		if pet.SexAnimal {
 			sexAnimal = "женский"
 		}
-		fmt.Printf("%s по кличке %s породы %s имеет %s окрас, пол: %s, вес: %f",
+		fmt.Printf("%s по кличке %s породы %s имеет %s окрас, пол: %s, вес: %.2f",
 			pet.TypeAnimal, pet.Name, pet.Breed, pet.Colour, sexAnimal, pet.Weight)
 	}
 

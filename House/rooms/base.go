@@ -5,7 +5,6 @@ import (
 	"Home/House/crockery"
 	"Home/House/family"
 	"Home/House/furniture"
-	"Home/House/plumbing"
 	"Home/House/windows"
 )
 
@@ -139,22 +138,18 @@ func (home Home) CreatHome() Home {
 			Type:     "Сервант",
 			Number:   2,
 			Height:   2,
-			Width:    69,
-			Length:   39.6,
+			Width:    6.9,
+			Length:   3.6,
 			Color:    "Венге",
 			Material: "ЛДСП, МДФ, стекло",
 		}},
 	}, {
 
 		//----------------------КУХНЯ---------------------
-		Type:       "Кухня",
-		Width:      2.1,
-		Length:     3.15,
-		Height:     2,
-		Appliances: []appliances.Appliance{{}},
-		Crockery:   []crockery.Crockery{{}},
-		Plumbings:  []plumbing.Plumbing{{}},
-		Furniture:  []furniture.Furniture{{}},
+		Type:   "Кухня",
+		Width:  2.1,
+		Length: 3.15,
+		Height: 2,
 		Window: windows.Window{
 			Number:     1,
 			Length:     1,
@@ -165,15 +160,10 @@ func (home Home) CreatHome() Home {
 
 		//-------------------ВАННАЯ---------------------
 
-		Type:       "Ванная",
-		Width:      1.57,
-		Length:     2.07,
-		Height:     2,
-		Appliances: []appliances.Appliance{{}},
-		Family:     []family.FamilyMember{{}},
-		Crockery:   []crockery.Crockery{{}},
-		Plumbings:  []plumbing.Plumbing{{}},
-		Furniture:  []furniture.Furniture{{}},
+		Type:   "Ванная",
+		Width:  1.57,
+		Length: 2.07,
+		Height: 2,
 	}}}
 
 	return home

@@ -22,6 +22,10 @@ func GetInputForPlumbing() Plumbing {
 // Функция для вывода информации о посуде
 
 func PrintCrockery(plumbing []Plumbing) {
+	if plumbing == nil {
+		return
+	}
+	fmt.Print("\n\n -------САНТЕХНИКА-------\n")
 	for _, pl := range plumbing {
 		install := "установлено"
 		if pl.Installed {

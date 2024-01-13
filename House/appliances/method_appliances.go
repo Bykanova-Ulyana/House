@@ -39,10 +39,18 @@ func GetInputForAppliance() (Appliance, error) {
 // Функция для вывода информации о бытовых приборах
 
 func PrintAppliance(a []Appliance) {
+	if a == nil {
+		return
+	}
+	fmt.Print("\n -------ТЕХНИКА-------\n")
 	for _, appliance := range a {
-		fmt.Printf("%s\n Бренд: %s\n Размер: %f x %f x %f\n см Мощность: %i\n Прибор включён? %b", appliance.Name,
+		isOn := "нет"
+		if appliance.IsOn {
+			isOn = "да"
+		}
+		fmt.Printf("%s\n\tБренд: %s\n\tРазмер: %.2f x %.2f x %.2f\n\tМощность: %d\n\tПрибор включён? %s\n", appliance.Name,
 			appliance.Brand, appliance.Width, appliance.Length,
-			appliance.Width, appliance.Power, appliance.IsOn)
+			appliance.Width, appliance.Power, isOn)
 	}
 
 }
